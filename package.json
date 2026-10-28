@@ -4,6 +4,9 @@
   "description": "Skill manager for DeepSeek Harness: install, edit, enable/disable and remove Agent Skills from the settings page.",
   "type": "module",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": "qingchuana",
   "icon": "./icon.svg",
   "keywords": [
@@ -43,8 +46,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "node --check index.js && node --check client.js && node --check lib/frontmatter.js && node --check lib/tar.js && node --check lib/zip.js",
-    "check": "node tools/check-manifest.mjs",
+    "test": "node --check index.js && node --check client.js && node --check lib/frontmatter.js && node --check lib/tar.js && node --check lib/zip.js && node tools/test-frontmatter.mjs && node tools/test-tar.mjs && node tools/test-zip.mjs && node tools/test-static.mjs",
+    "check": "node tools/check-manifest.mjs && node tools/check-remote-payloads.mjs && node tools/check-reserved-names.mjs",
     "verify": "npm test && npm run check"
   },
   "engines": {

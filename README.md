@@ -2,6 +2,28 @@
 
 > 插件包名 **`skill-tool`**（npm 上未被占用，可直接发布）；仓库名沿用 `dsh-skill-hub`。
 
+## 安装
+
+```powershell
+# 从 GitHub 安装（现在就能用）
+dsh plugin add github:qingchuana/dsh-skill-hub
+
+# 发布到 npm 之后，也可以用包名
+dsh plugin add skill-tool
+```
+
+装完在 **设置 → 技能管理** 里使用。
+
+## 测试
+
+```powershell
+npm test        # frontmatter / tar.gz / zip 的单元测试 + 静态回归检查
+npm run check   # 包清单检查 + Remote 方法契约检查（Client 发送的每个键 Host 都会读）
+npm run verify  # 两者一起跑，CI 用的就是它
+```
+
+全部离线运行：归档夹具用 `node:zlib` 现场构造，不需要网络，也不需要装好 DSH。
+
 DSH Desktop 的 **技能管理插件**：在设置页里管理 `$DSH_HOME/skills`（本机即 `~/.dsh/skills`）下的 Agent 技能，并提供给 Agent 一个 `skill_hub` 工具。
 
 原生扫描器会监听这个目录，改动 **不需要重启、不需要刷新**；本插件只是把「文件系统约定」变成可操作的界面，并且把扫描器**默默跳过**的技能暴露出来。
