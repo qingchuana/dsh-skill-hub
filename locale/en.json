@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Skills",
+    "description": "Manage Agent Skills: install from a local directory, a SKILL.md, a .zip package (pick it in the system file dialog or click it in the folder browser), a GitHub repository (list every skill it holds and install one in a click) or a URL, then enable, disable, edit or remove them. Everything lands in ~/.dsh/skills and is picked up by the native scanner."
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Skill Hub">
+  <defs>
+    <linearGradient id="skill-hub-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12a594"/>
+      <stop offset="1" stop-color="#0b7f74"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#skill-hub-bg)"/>
+  <path d="M18 17.5h11.5a4.5 4.5 0 0 1 4.5 4.5v25a3.5 3.5 0 0 0-3.5-3.5H18z" fill="#ffffff" opacity="0.95"/>
+  <path d="M46 17.5H34.5a4.5 4.5 0 0 0-4.5 4.5v25a3.5 3.5 0 0 1 3.5-3.5H46z" fill="#ffffff" opacity="0.72"/>
+  <path d="M31.8 12.5l1.5 3.2 3.2 1.5-3.2 1.5-1.5 3.2-1.5-3.2-3.2-1.5 3.2-1.5z" fill="#ffffff"/>
+</svg>

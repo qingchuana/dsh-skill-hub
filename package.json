@@ -1,0 +1,68 @@
+{
+  "name": "skill-tool",
+  "version": "1.0.0",
+  "description": "Skill manager for DeepSeek Harness: install, edit, enable/disable and remove Agent Skills from the settings page.",
+  "type": "module",
+  "license": "MIT",
+  "author": "qingchuana",
+  "icon": "./icon.svg",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "agent-skills",
+    "skills",
+    "skill-manager"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qingchuana/dsh-skill-hub.git"
+  },
+  "homepage": "https://github.com/qingchuana/dsh-skill-hub#readme",
+  "bugs": {
+    "url": "https://github.com/qingchuana/dsh-skill-hub/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./lib/frontmatter": "./lib/frontmatter.js",
+    "./lib/tar": "./lib/tar.js",
+    "./lib/zip": "./lib/zip.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --check index.js && node --check client.js && node --check lib/frontmatter.js && node --check lib/tar.js && node --check lib/zip.js",
+    "check": "node tools/check-manifest.mjs",
+    "verify": "npm test && npm run check"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-api-remotes"
+      ]
+    }
+  }
+}

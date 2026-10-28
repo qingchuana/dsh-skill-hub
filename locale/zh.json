@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "技能管理",
+    "description": "集中管理 Agent Skills：从本地目录、SKILL.md、.zip 包（系统文件窗口直选，或浏览文件夹点选）、GitHub 仓库（可列出仓库里全部技能一键装）或 URL 安装，随时启停、编辑与删除，全部落在 ~/.dsh/skills 由原生扫描器自动识别。"
+  }
+}
